@@ -28,9 +28,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Run Karate tests
         run: |
           npm install
