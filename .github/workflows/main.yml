@@ -1,0 +1,28 @@
+name: Karate Tests
+
+on:
+  push:
+    branches:
+      - master # Cambia 'master' por la rama que desees
+  pull_request:
+    branches:
+      - master # Cambia 'master' por la rama que desees
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: karatelabs/karate-chrome:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Run Karate tests
+        run: |
+          npm install
+          node test.js
