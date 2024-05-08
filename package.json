@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "@jbangdev/jbang": "^0.1.4"
+  }
+}
