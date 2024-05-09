@@ -12,7 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: jbangdev/jbang:latest # Utiliza una imagen que ya tenga jbang instalado
+      image: jbangdev/jbang-action:latest # Utiliza una imagen que ya tenga jbang instalado
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
