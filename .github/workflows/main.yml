@@ -12,7 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: karatelabs/karate-chrome:latest
+      image: jbangdev/jbang:latest # Utiliza una imagen que ya tenga jbang instalado
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -30,14 +30,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
-
-      - name: Install SDKMan
-        run: |
-          curl -s "https://get.sdkman.io" | bash
-          source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-      - name: Install jbang
-        run: sdk install jbang
 
       - name: Run Karate tests
         run: |
