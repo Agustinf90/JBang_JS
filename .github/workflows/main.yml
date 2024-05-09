@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install curl
+        run: sudo apt-get update && sudo apt-get install -y curl
+
       - name: Install jbang
         run: curl -sSfL https://get.jbang.dev | bash
 
