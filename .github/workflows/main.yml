@@ -34,5 +34,6 @@ jobs:
       - name: Run Karate tests
         run: |
           npm install
-          node test.js
+          cd karate-npm
+          npm run test karate
 
