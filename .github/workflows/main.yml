@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install jbang
+        run: curl -sSfL https://get.jbang.dev | bash
+
       - name: Run Karate tests
         run: |
           npm install
